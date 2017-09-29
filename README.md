@@ -1,6 +1,6 @@
-#TestingGrounds
+# TestingGrounds
 
-##A Hunger-Games inspired FPS with outdoor terrain. Advanced AI, basic networking, pickups, skeletal mesh, checkpoints, etc.
+## A Hunger-Games inspired FPS with outdoor terrain. Advanced AI, basic networking, pickups, skeletal mesh, checkpoints, etc.
 
 This is part of the Unreal C++ Course on Udemy.
 
