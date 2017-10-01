@@ -18,3 +18,10 @@ Shane Tarr
 * Fixing .gitignore
 * First Person Character Overview
 * Third Person Character
+* Introducing AI Behaviour Trees
+* Introducing AI Blackboard Data
+* Target Points and Patrol Routes
+* Using Any Actor for Waypoints
+* Options for grouping actors
+* Blueprint Behaviour Tree Tasks
+* Modular Arithmetic & Cycles
