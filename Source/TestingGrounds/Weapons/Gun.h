@@ -63,8 +63,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
 
-protected:
-
 	/** Fires a projectile. */
 	void OnFire();
 	
