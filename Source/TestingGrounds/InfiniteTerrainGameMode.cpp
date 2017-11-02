@@ -4,14 +4,21 @@
 #include "InfiniteTerrainGameMode.h"
 #include "AI/Navigation/NavMeshBoundsVolume.h"
 #include "EngineUtils.h"
+#include "Actorpool.h"
+
+AInfiniteTerrainGameMode::AInfiniteTerrainGameMode()
+{
+	NavMeshBoundsVolumePool = CreateDefaultSubobject<UActorpool>(FName("Nav Mesh Bounds Volume Pool"));
+}
 
 
-void AInfiniteTerrainGameMode::PopulateBoundsVolumePool() {
+void AInfiniteTerrainGameMode::PopulateBoundsVolumePool() 
+{
 	auto VolumeIterator = TActorIterator<ANavMeshBoundsVolume>(GetWorld());
 	while (VolumeIterator)
 		{
-		AddToPool(*VolumeIterator);
-		++VolumeIterator;
+			AddToPool(*VolumeIterator);
+			++VolumeIterator;
 		}
 	}
 
