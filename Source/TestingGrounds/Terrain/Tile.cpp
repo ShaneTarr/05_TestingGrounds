@@ -19,7 +19,6 @@ ATile::ATile()
 
 void ATile::SetPool(UActorpool* InPool)
 {
-	UE_LOG(LogTemp, Warning, TEXT("[%s] Setting Pool %s"), *(this->GetName()), *(InPool->GetName()));
 	Pool = InPool;
 
 	PositionNavMeshBoundsVolume();
@@ -30,10 +29,8 @@ void ATile::PositionNavMeshBoundsVolume()
 	NavMeshBoundsVolume = Pool->Checkout();
 	if (NavMeshBoundsVolume == nullptr)
 	{
-		UE_LOG(LogTemp, Error, TEXT("[%s] Not enough actors in pool."), *GetName());
 		return;
 	}
-	UE_LOG(LogTemp, Error, TEXT("[%s] Checked out: {%s}"), *GetName(), *NavMeshBoundsVolume->GetName());
 	NavMeshBoundsVolume->SetActorLocation(GetActorLocation() + NavigationBoundsOffset);
 	GetWorld()->GetNavigationSystem()->Build();
 }
